@@ -1,0 +1,30 @@
+.container {
+      margin-top: 50px;
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    .pricing-table th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+    .buy-btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .plan-details {
+      display: none;
+      background-color: #ffc107;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }

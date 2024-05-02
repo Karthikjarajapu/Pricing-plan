@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">Pricing Plans</h1>
+    <table class="table pricing-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Hobby</th>
+          <th>Professional</th>
+          <th>Business</th>
+          <th>Enterprise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Price</td>
+          <td>$99</td>
+          <td>$899</td>
+          <td>Call us</td>
+          <td>$399</td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td>6 months</td>
+          <td>1 year</td>
+          <td>2 years</td>
+          <td>Custom</td>
+        </tr>
+        <tr>
+          <td>Features</td>
+          <td>Boy flow</td>
+          <td>6 months</td>
+          <td>12 months</td>
+          <td>Custom</td>
+        </tr>
+        <tr>
+          <td>Support</td>
+          <td>Full source code</td>
+          <td>Seas/Subscription</td>
+          <td>Intranet</td>
+          <td>Downloadable Software</td>
+        </tr>
+        <tr>
+          <td>Extras</td>
+          <td>Redistribute</td>
+          <td>Ciastom code</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Downloaded Software</td>
+          <td></td>
+          <td><i class="fas fa-check"></i></td>
+          <td></td>
+          <td><i class="fas fa-check"></i></td>
+        </tr>
+        <tr>
+          <td>Custom Code</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><i class="fas fa-check"></i></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><a href="#" class="buy-btn" onmouseover="showDetails('hobby')" onmouseout="hideDetails()">Buy Now</a></td>
+          <td><a href="#" class="buy-btn" onmouseover="showDetails('professional')" onmouseout="hideDetails()">Buy Now</a></td>
+          <td><a href="#" class="buy-btn" onmouseover="showDetails('business')" onmouseout="hideDetails()">Buy Now</a></td>
+          <td><a href="#" class="buy-btn" onmouseover="showDetails('enterprise')" onmouseout="hideDetails()">Buy Now</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Plan Details Sections -->
+    <div id="planDetailsHobby" class="plan-details">
+      <h3>Hobby Plan Details</h3>
+      <p>6 months duration</p>
+      <p>Boy flow</p>
+      <p>Redistribute</p>
+      <p>No Downloaded Software</p>
+      <p>No Custom Code</p>
+    </div>
+    <div id="planDetailsProfessional" class="plan-details">
+      <h3>Professional Plan Details</h3>
+      <p>1 year duration</p>
+      <p>6 months access</p>
+      <p>Ciastom code</p>
+      <p>Downloaded Software included</p>
+      <p>No Custom Code</p>
+    </div>
+    <div id="planDetailsBusiness" class="plan-details">
+      <h3>Business Plan Details</h3>
+      <p>2 years duration</p>
+      <p>Intranet access</p>
+      <p>No Downloaded Software</p>
+      <p>No Custom Code</p>
+    </div>
+    <div id="planDetailsEnterprise" class="plan-details">
+      <h3>Enterprise Plan Details</h3>
+      <p>Custom duration</p>
+      <p>Intranet access</p>
+      <p>Downloadable Software included</p>
+      <p>Custom Code included</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Font Awesome Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    function showDetails(plan) {
+      document.getElementById(`planDetails${plan.charAt(0).toUpperCase() + plan.slice(1)}`).style.display = 'block';
+    }
+
+    function hideDetails() {
+      const planDetails = document.querySelectorAll('.plan-details');
+      planDetails.forEach(detail => {
+        detail.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
